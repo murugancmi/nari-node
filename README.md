@@ -2,8 +2,7 @@
 
 
 1. Install NodeJS and NPM
-2. Install Redis
-3. Start Nari Signalling server
+2. Start Nari Signalling server
 
 
 
@@ -27,35 +26,16 @@ zypper ar -f http://download.opensuse.org/repositories/home:/kwk:/orientdb/openS
 zypper install nodejs nodejs-devel
 zypper install nodejs4
 ```
-### Install Redis
-#### Linux Platform
-Install Redis all Linux platform
-```shell
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make
-make test
-make install
-```
-Start redis server
-```shell
-redis-server
-```
+
 ### Install Nari signalling server
 #### Linux Platform
 Start Nari signalling server
 ```shell
-tar  xvzf nari-server.tar.gz
-cd nari-server
+git clone https://github.com/murugancmi/nari-node.git 
+cd nari-node
 npm install
 ```
-Edit cfg.js to replace your reds ip and port
 
-```shell
-vi route/cfg.js
-```
-Change redis_ip and redis_port then save cfg.js
 
 Time to start your Signalling server
 
